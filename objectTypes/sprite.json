@@ -1,0 +1,53 @@
+{
+	"name": "Sprite",
+	"plugin-id": "Sprite",
+	"sid": 125227316337684,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DétruireHorsDeLaScène",
+			"sid": 475094740877668
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solide",
+			"sid": 306007814715934
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Projectile",
+			"sid": 700913399270605
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 41,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 174477375090854,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

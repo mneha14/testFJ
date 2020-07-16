@@ -1,0 +1,443 @@
+{
+	"name": "Feuille d'Evènements 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "score",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 997258581441424
+		},
+		{
+			"eventType": "variable",
+			"name": "vie",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 465050663285983
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 551395852472620,
+					"parameters": {
+						"interval-seconds": "random(0.5,3)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "SpawnerCollectibles",
+					"sid": 728855270270477,
+					"parameters": {
+						"object": "Collectibles",
+						"layer": "0",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "SpawnerCollectibles",
+					"sid": 278783713838125,
+					"parameters": {
+						"x": "1000",
+						"y": "random(100,400)"
+					}
+				}
+			],
+			"sid": 435017189606653
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 477581365775161,
+					"parameters": {
+						"interval-seconds": "random(0.3,2)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "SpawnerPlateformes",
+					"sid": 463881709530829,
+					"parameters": {
+						"x": "1000",
+						"y": "random(160,420)"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "SpawnerPlateformes",
+					"sid": 875518345491671,
+					"parameters": {
+						"object": "Sprite",
+						"layer": "0",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 485801032398843
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "MainCharacter",
+					"sid": 521239183461235,
+					"parameters": {
+						"object": "Collectibles"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Collectibles",
+					"sid": 254497534441254
+				}
+			],
+			"sid": 570573609560839,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Brocoli"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Collectibles",
+							"sid": 744179089311326,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 231125936624132,
+							"parameters": {
+								"variable": "vie",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 912256940016336
+				},
+				{
+					"eventType": "comment",
+					"text": "Fromage"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Collectibles",
+							"sid": 601374371122297,
+							"parameters": {
+								"comparison": 0,
+								"number": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 123748680750565,
+							"parameters": {
+								"variable": "score",
+								"value": "10"
+							}
+						}
+					],
+					"sid": 533626017196968
+				},
+				{
+					"eventType": "comment",
+					"text": "Steak"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Collectibles",
+							"sid": 753400570345050,
+							"parameters": {
+								"comparison": 0,
+								"number": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 869441161453828,
+							"parameters": {
+								"variable": "score",
+								"value": "30"
+							}
+						}
+					],
+					"sid": 852116667942271
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "Collectibles",
+							"sid": 823756513220390,
+							"parameters": {
+								"comparison": 0,
+								"number": "3"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 859444682249510,
+							"parameters": {
+								"variable": "vie",
+								"comparison": 2,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 993489135216247,
+							"parameters": {
+								"variable": "vie",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 180096959434106
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 357998971990871
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Vie",
+					"sid": 475295710035455,
+					"parameters": {
+						"frame-number": "3"
+					}
+				}
+			],
+			"sid": 308788493331678
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Collectibles",
+					"sid": 188329766501562
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Collectibles",
+					"sid": 615395010643307,
+					"parameters": {
+						"frame-number": "random(0,4)"
+					}
+				}
+			],
+			"sid": 587309135488494
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Vie",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 479694090874175,
+							"parameters": {
+								"variable": "vie",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-pixel-rounding",
+							"objectClass": "System",
+							"sid": 752365842448796,
+							"parameters": {
+								"mode": "enabled"
+							}
+						}
+					],
+					"sid": 487018365535001
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 823194075161696,
+							"parameters": {
+								"variable": "vie",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Vie",
+							"sid": 726668682586159,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 660586805955862
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 662389937629474,
+							"parameters": {
+								"variable": "vie",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Vie",
+							"sid": 747216176570990,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 697068851358028
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 950978745153137,
+							"parameters": {
+								"variable": "vie",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Vie",
+							"sid": 717981425724082,
+							"parameters": {
+								"frame-number": "3"
+							}
+						}
+					],
+					"sid": 339647360459400
+				}
+			],
+			"sid": 163308649836475
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 651805657262896
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Texte",
+					"sid": 805688923105977,
+					"parameters": {
+						"text": "score"
+					}
+				}
+			],
+			"sid": 351475647728157
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Collectibles",
+					"sid": 309180714062491,
+					"parameters": {
+						"object": "Sprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Collectibles",
+					"sid": 309636683749933
+				}
+			],
+			"sid": 386303200651625
+		}
+	],
+	"sid": 102247379917754
+}

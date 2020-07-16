@@ -1,0 +1,73 @@
+{
+	"name": "Vie",
+	"plugin-id": "Sprite",
+	"sid": 354917520563009,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 239,
+						"height": 64,
+						"originX": 0.4769874476987448,
+						"originY": 0.53125,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 29,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 239,
+						"height": 64,
+						"originX": 0.4769874476987448,
+						"originY": 0.53125,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 28,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 239,
+						"height": 64,
+						"originX": 0.4769874476987448,
+						"originY": 0.53125,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 27,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 239,
+						"height": 64,
+						"originX": 0.4769874476987448,
+						"originY": 0.53125,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 26,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 690308331074174,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
